@@ -26,8 +26,10 @@ class PatronsController < ApplicationController
       @patron.increment
     end
 
+    message = "Barcode " + params[:patron][:barcode].to_s + " was checked in"
+
     respond_to do |format|
-      format.html { redirect_to checkin_path, :notice => 'Patron was checked in.' }
+      format.html { redirect_to checkin_path, :notice => message }
     end
   end
 
