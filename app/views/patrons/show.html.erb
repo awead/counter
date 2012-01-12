@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Barcode:</b>
+  <%= @patron.barcode %>
+</p>
+
+<p>
+  <b>Count:</b>
+  <%= @patron.count %>
+</p>
+
+
+<%= link_to 'Edit', edit_patron_path(@patron) %> |
+<%= link_to 'Back', patrons_path %>
