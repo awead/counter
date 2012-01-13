@@ -4,15 +4,16 @@
   <tr>
     <th>Barcode</th>
     <th>Count</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>First Vist</th>
+    <th>Most Recent Visit</th>
   </tr>
 
 <% @patrons.each do |patron| %>
   <tr>
     <td><%= patron.barcode %></td>
     <td><%= patron.count %></td>
+    <td><%= patron.created_at.strftime("%F") %></td>
+    <td><%= patron.updated_at.strftime("%F") %></td>
   </tr>
 <% end %>
 </table>
