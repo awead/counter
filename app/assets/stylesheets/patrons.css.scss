@@ -1,3 +1,16 @@
 // Place all the styles related to the patrons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.kiosk {
+  font-size: large;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -160;
+  margin-left: -90px;
+  input, p {
+    font-size: large;
+  }
+}
