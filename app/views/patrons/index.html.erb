@@ -1,11 +1,9 @@
-<h1>Listing patrons</h1>
-
-<table>
+<table class="table table-striped table-condensed">
   <tr>
-    <th>Barcode</th>
-    <th>Count</th>
-    <th>First Vist</th>
-    <th>Most Recent Visit</th>
+    <th><%= sortable "barcode" %></th>
+    <th><%= sortable "count" %></th>
+    <th><%= sortable "created_at", "First Visit" %></th>
+    <th><%= sortable "updated_at", "Most Recent Visit" %></th>
   </tr>
 
 <% @patrons.each do |patron| %>
@@ -18,6 +16,3 @@
 <% end %>
 </table>
 
-<br />
-
-<%= link_to 'Checkin patron', checkin_path %>
