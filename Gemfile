@@ -5,6 +5,8 @@ gem 'rails', '3.1.3'
 gem 'sqlite3'
 gem 'json'
 gem 'jquery-rails'
+gem 'sorted', '~> 0.4.3'
+gem 'twitter-bootstrap-rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.5'
