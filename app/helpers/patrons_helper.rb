@@ -10,6 +10,7 @@ module PatronsHelper
   def direction_icon(icon = "")
     icon = "icon-chevron-up" if sort_direction == "asc"
     icon = "icon-chevron-down" if sort_direction == "desc"
-    return icon
+    # TODO...
+    return ""
   end
 end
