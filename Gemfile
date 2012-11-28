@@ -1,19 +1,16 @@
 source 'http://rubygems.org'
 
-# Gems for all environments
-gem 'rails', '3.1.3'
-gem 'sqlite3'
-gem 'less-rails'
-gem 'therubyracer'
-gem 'json'
+gem 'rails',          '~>3.2.9'
+gem 'sass-rails'
+gem 'bootstrap-sass'
 gem 'jquery-rails'
-gem 'sorted', '~> 0.4.3'
-gem 'twitter-bootstrap-rails'
+gem 'sqlite3'
+gem 'sorted'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.1.5'
-  gem 'coffee-rails', '~> 3.1.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'compass'
+  gem 'coffee-rails'
+  gem 'uglifier'
 end
 
 group :production do

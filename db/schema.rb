@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(:version => 20120112211117) do
   create_table "patrons", :force => true do |t|
     t.string   "barcode"
     t.integer  "count",      :default => 1
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
 end
