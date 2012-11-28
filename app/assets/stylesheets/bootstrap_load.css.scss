@@ -1,1 +1,6 @@
 @import "bootstrap";
+
+// Pushes content down to account for fixed navbar
+.content {
+  padding-top: 60px;
+}
