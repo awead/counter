@@ -3,6 +3,8 @@ source 'http://rubygems.org'
 # Gems for all environments
 gem 'rails', '3.1.3'
 gem 'sqlite3'
+gem 'less-rails'
+gem 'therubyracer'
 gem 'json'
 gem 'jquery-rails'
 gem 'sorted', '~> 0.4.3'
