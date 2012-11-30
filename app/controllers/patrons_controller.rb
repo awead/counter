@@ -10,6 +10,7 @@ class PatronsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @patrons }
+      format.csv  { send_data @patrons.to_csv(force_quotes: true) }
     end
   end
 
@@ -30,12 +31,6 @@ class PatronsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to checkin_path, :notice => message }
     end
-  end
-
-  def download
-    send_data Patron.to_xlsx.to_stream.read, 
-              :filename => 'patrons.xlsx', 
-              :type => "application/vnd.openxmlformates-officedocument.spreadsheetml.sheet"
   end
 
   private

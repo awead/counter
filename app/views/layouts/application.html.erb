@@ -25,7 +25,7 @@
             <ul class="nav">
               <li><%= link_to "Checkin", root_path  %></li>
               <li><%= link_to "Patrons", patrons_path  %></li>
-              <li><%= link_to "Download", download_path %></li>
+              <li><%= link_to "Download", patrons_path(format: "csv") %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

@@ -6,7 +6,6 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'sqlite3'
 gem 'sorted'
-gem 'acts_as_xlsx'
 
 group :assets do
   gem 'compass'

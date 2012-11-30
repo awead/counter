@@ -24,6 +24,11 @@ describe PatronsController do
       get :index, {}, valid_session
       assigns(:patrons).should eq([patron])
     end
+
+    it "returns csv" do
+      get :index, :format => :csv
+      response.should be_success
+    end
   end
 
   describe "GET checkin" do
@@ -62,12 +67,5 @@ describe PatronsController do
       end
     end
   end
-
-  describe "GET download" do
-    it "should return a spreadsheet file" do
-      get :download, {}, valid_session
-      puts response.header["Content-Disposition"].should == "attachment; filename=\"patrons.xlsx\""
-    end
-  end
-
+  
 end

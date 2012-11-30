@@ -23,8 +23,14 @@ describe Patron do
     @patron.barcode.should == "41111111111111"
   end
 
-  it "should return a spreadsheet" do
-    Patron.to_xlsx.should be_kind_of(Axlsx::Package)
-  end
+  describe "::to_csv" do
+    it "should return a csv file" do
+      @patron.barcode = "41111111111111"
+      @patron.save
+      time = @patron.created_at.strftime("%D %T")
+      Patron.to_csv.should match("Barcode,Count,Date\n41111111111111,1,"+time+"\n")
+    end
 
+  end
+  
 end

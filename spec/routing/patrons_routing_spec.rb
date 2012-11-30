@@ -17,11 +17,7 @@ describe PatronsController do
 
     it "home page" do
       get("/").should route_to("patrons#checkin")
-    end
-
-    it "download" do
-      get("/download").should route_to("patrons#download")
-    end
+    end 
 
   end
 end
