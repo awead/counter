@@ -23,4 +23,8 @@ describe Patron do
     @patron.barcode.should == "41111111111111"
   end
 
+  it "should return a spreadsheet" do
+    Patron.to_xlsx.should be_kind_of(Axlsx::Package)
+  end
+
 end

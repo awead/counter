@@ -63,4 +63,11 @@ describe PatronsController do
     end
   end
 
+  describe "GET download" do
+    it "should return a spreadsheet file" do
+      get :download, {}, valid_session
+      puts response.header["Content-Disposition"].should == "attachment; filename=\"patrons.xlsx\""
+    end
+  end
+
 end

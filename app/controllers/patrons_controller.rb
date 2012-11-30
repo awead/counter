@@ -32,6 +32,12 @@ class PatronsController < ApplicationController
     end
   end
 
+  def download
+    send_data Patron.to_xlsx.to_stream.read, 
+              :filename => 'patrons.xlsx', 
+              :type => "application/vnd.openxmlformates-officedocument.spreadsheetml.sheet"
+  end
+
   private
 
   def sort_column
