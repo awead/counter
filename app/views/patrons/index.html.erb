@@ -1,17 +1,13 @@
 <table class="table table-striped table-condensed">
   <tr>
     <th><%= sortable "barcode" %></th>
-    <th><%= sortable "count" %></th>
-    <th><%= sortable "created_at", "First Visit" %></th>
-    <th><%= sortable "updated_at", "Most Recent Visit" %></th>
+    <th><%= sortable "created_at", "Checkin Time" %></th>
   </tr>
 
 <% @patrons.each do |patron| %>
   <tr>
     <td><%= patron.barcode %></td>
-    <td><%= patron.count %></td>
-    <td><%= patron.created_at.strftime("%F") %></td>
-    <td><%= patron.updated_at.strftime("%F") %></td>
+    <td><%= patron.created_at.strftime("%F %T") %></td>
   </tr>
 <% end %>
 </table>
