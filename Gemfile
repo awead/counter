@@ -16,7 +16,3 @@ end
 group :test, :development do
   gem 'rspec-rails'
 end
-
-group :production do
-  gem 'passenger', '=3.0.18'
-end
