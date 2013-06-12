@@ -16,5 +16,5 @@
 public/assets
 
 # Ignore implementation-specific files
-.ruby-gems
+.ruby-gemset
 bin
